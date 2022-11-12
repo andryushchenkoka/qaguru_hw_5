@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+ext {
+    selenideVersion = "6.7.2"
+    junitVersion = "5.8.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:${selenideVersion}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    )
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
