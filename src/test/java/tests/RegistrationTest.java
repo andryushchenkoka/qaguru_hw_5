@@ -4,26 +4,26 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-public class RegistrationTest extends TestBase{
+public class RegistrationTest extends TestBase {
 
-    private String  firstName       = "Kirill",
-                    lastName        = "Andryushchenko",
-                    userEmail       = "kirill@mail.com",
-                    userGender      = "Male",
-                    userPhone       = "8005553535",
-                    userBirthDay    = "26",
-                    userBirthMonth  = "June",
-                    userBirthYear   = "2001",
-                    subjects        = "Maths",
-                    hobbies         = "Music",
-                    imagePath       = "profile.jpg",
-                    currentAddress  = "Lenina Street",
-                    userState       = "NCR",
-                    userCity        = "Delhi";
+    private String firstName = "Kirill",
+            lastName = "Andryushchenko",
+            userEmail = "kirill@mail.com",
+            userGender = "Male",
+            userPhone = "8005553535",
+            userBirthDay = "26",
+            userBirthMonth = "June",
+            userBirthYear = "2001",
+            subjects = "Maths",
+            hobbies = "Music",
+            imagePath = "profile.jpg",
+            currentAddress = "Lenina Street",
+            userState = "NCR",
+            userCity = "Delhi";
 
     @Test
     @DisplayName("Регистрация пользователя с валидными данными")
-    public void successfulRegistration(){
+    public void successfulRegistration() {
 
         new RegistrationPage().openPage()
                 .setFirstName(firstName)

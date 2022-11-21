@@ -7,8 +7,8 @@ public class TestBase {
 
     @BeforeAll
     public static void beforeSettings() {
-        Configuration.holdBrowserOpen   = true;
-        Configuration.browserSize       = "1920x1080";
-        Configuration.baseUrl           = "https://demoqa.com";
+        Configuration.holdBrowserOpen = true;
+        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
     }
 }

@@ -6,13 +6,13 @@ import static com.codeborne.selenide.Condition.*;
 
 public class RegisterResultsModule {
 
-    public void verifyModule(String title){
+    public void verifyModule(String title) {
 
         $(".modal-dialog").should(appear);
         $("div[id *= 'title-lg']").shouldHave(text(title));
     }
 
-    public void verifyResult(String key, String value){
+    public void verifyResult(String key, String value) {
         $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
     }
 }
